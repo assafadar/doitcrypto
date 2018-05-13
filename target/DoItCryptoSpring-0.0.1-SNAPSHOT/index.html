@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom-style.css">
+<title>Do It Crypto! | Trading Cryptocurrencies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-app="cryptoApp" ng-controller="mainController">
+	<section>
+		<div class="main-header">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
+						<div class="row text-center">
+								<div class="offset-lg-1 offset-md-4 offset-sm-4 offset-xs-4 col-lg-3 col-md-3 col-sm-4 col-xs-4">
+									<a href="/"><button class="btn" id="topBtn">Join Now!</button></a>
+								</div>
+								<div class="col-lg-3">
+										<a href="#why-crypto"><button class="btn" id="topBtn">Why Crypto</button></a>
+									</div>
+								<div class="col-lg-3">
+										<a href="#magazines"><button class="btn" id="topBtn">Magazines</button></a>
+									</div>
+							</div>
+				</div>
+		</div>
+		<div><ng-view></ng-view></div>
+	</section>
+	<footer class="footer text-center">
+		<p>
+			Copyright © 2018 DoItCrypto - All rights reserved.
+		</p>
+	</footer>
+	<script src="js/cryptoApp.js"></script>
+	<script src="js/mainController.js"></script>
+	<script src="js/ebookController.js"></script>
+	<script src="js/otpController.js"></script>
+	<script src="js/registerController.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

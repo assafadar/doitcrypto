@@ -1,0 +1,302 @@
+.right-side{
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 4%;
+}
+.required-field{
+	padding-top:3%;
+}
+.required-field p{
+	padding-top:3%;
+	max-width: 90%;
+}
+.left-side{
+	padding-top: 4%;
+	padding-left: 3%;
+	max-width: 90%;	
+}
+@media screen and (max-width: 800px){
+	.left-side{
+		padding-left: 10%;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.requiered-field{
+		max-width: 90%;
+		text-align: center;
+	}
+	.main-header{
+		text-align: center;
+	}
+}
+/* 
+	TOP BAR MENU
+*/
+
+.main-header{
+	background-color: #f6a006;
+	padding-top: 2%;
+}
+
+#topBtn{
+	background-color: transparent;
+	border-color: transparent;
+	color: white;
+}
+#topBtn:hover{
+	background-color: steelblue;
+}
+.modal-body{
+	padding: 0;
+}
+.no-spacing{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	background: url("../img/doitcrypto.jpg") center center fixed;
+	color: #ffffff;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.with-transperency, .right-side{
+	padding-bottom: 4%;
+	background-color:rgba(0, 0, 34, 0.7);
+}
+.header-textbox{
+	margin-top: 20%;
+	margin-bottom: 2%;
+	padding: 4%;
+}
+.video{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.green{
+	color: #73bc53;
+}
+.form-control:focus{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.form-control::-webkit-input-placeholder {
+    color:#ffffff;
+}
+.form-control textarea{
+	color: #ffffff;
+}
+input,select{
+ 	height: 60px;
+ 	color: #ffffff;
+}
+select{
+	padding-top: 20%;
+}
+option{
+ 	background-color: #555555;
+ 	color:#ffffff;
+ }
+select:focus{
+ 	color: #ffffff;
+ }
+ .registration-form{
+ 	padding-top: 27%;
+ }
+ .form-control{
+ 	background-color: rgba(255, 255, 255, 0.5);
+ 	color: #ffffff;
+ 	padding-left: 9%;
+ 	padding-right: 9%;
+ }
+ .form-control input{
+ 	padding-top: 2%;
+ }
+#hero-submit{
+	background-color: orange;
+	border:none;
+}
+.btn-lg{
+	font-size: 26px;
+}
+.registration-form h2{
+	padding-bottom: 5%;
+}
+/* 
+
+THIS PART DEALS WITH
+CRYPTOCURRENCEIS SECTION
+
+*/
+.why-crypto{
+	padding-top: 3%;
+	padding-bottom: 5%;
+}
+.why-crypto h4{
+	color: #777777;
+	padding-bottom: 3%;
+}
+.why-crypto p{
+	padding-top: 3%;
+}
+/* 
+
+THIS PART DEALS WITH 
+
+WHAT IS BTC
+
+*/
+.what-is-btc{
+	background-color: #f6a006;
+	color: #ffffff;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.what-is-btc h2{	
+	padding-top: 15%;
+	padding-bottom: 5%;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.what-is-btc p{
+	padding-top: 2%;
+}
+#action-btn{
+	margin-top: 10%;
+}
+.btc-bg{
+	background:url("../img/btc-bg.png");
+	background-repeat: no-repeat;
+	width: 100;
+	padding-bottom: 8%;
+}
+
+/* 
+
+THIS PART DEALS 
+
+WITH MAGAZINES
+
+*/
+.magazines{
+	padding-top: 4%;
+	padding-left: 3%;
+	padding-bottom: 4%;
+}
+.small-up-space{
+	padding-top: 4%;
+}
+.magazines a{
+	color: #777777;
+}
+.magazines a:hover{
+	text-decoration: none;
+}
+.black{
+	color: #555555;
+}
+.lightblue{
+	color: #009fca;
+}
+.mgz-link{
+	padding-top: 2%;
+}
+.mgz-link:hover{
+	background-color: #f7f8f9;
+}
+@media screen and (max-width: 800px){
+	.magazines{
+		text-align: center;	
+	}
+	.ebook{
+		text-align: center;
+	}
+	.ebook img, .ebook input{
+		margin-bottom: 2%;
+	}
+
+
+}
+/*
+
+THIS PART DEALS 
+
+WITH EBOOK 
+
+*/
+
+.ebook{
+	background-color: #cccccc;
+	padding-top: 2%;
+	padding-bottom: 3%;
+	color: #ffffff;
+}
+.ebook h2,.ebook p{
+	padding-top: 2%;
+}
+.with-shadow{
+    box-shadow: 5px 5px 2.5px #565656;
+}
+/* 
+
+THIS PART DEALS WITH 
+
+THE FOOTER
+
+*/
+.footer{
+	background-color: #f7f8f9;
+	padding-top: 5%;
+	padding-bottom: 1%;
+}
+.footer p{
+	color:#777777;
+}
+/* 
+	OTP PART
+*/
+.price-charts{
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.after-register{
+	padding-top: 5%;
+	background-color: #009fca;
+}
+.after-register p{
+	color: #555555;
+	padding-top: 2%;
+}
+.otp-form{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: #e1e1e1;
+}
+.otp-form span{
+	color: #555555;
+	margin-bottom: 3%;
+}
+.warning{
+	color: #555555;
+	font-size: 14px;
+	background-color: #e1e1e1;
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
+.sbm-btn{
+	margin-top: 1%;
+}
+/* 
+	THANK YOU PAGE
+*/
+.thank-you{
+	background-color: #009fca;
+	color:#555555;
+	padding: 7%;
+}

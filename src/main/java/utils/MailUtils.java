@@ -14,8 +14,8 @@ import javax.mail.internet.MimeMessage;
 
 public class MailUtils {
 	
-	final static String FROM_MAIL_ADDRESS = "asafadar55@gmail.com";
-	final static String EMAIL_ACCOUNT_PASSWORD = "Massarik11a";
+	final static String FROM_MAIL_ADDRESS = "SENDER_MAIL_ADDRESS";
+	final static String EMAIL_ACCOUNT_PASSWORD = "PASSWORD";
 
 	//Welocme Email
 	public static void sendWelcomeEmail(String email,String name) throws Exception{

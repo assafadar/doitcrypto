@@ -26,5 +26,13 @@ public class OTP {
 		}
 		return otp;
 	}
+	
+	public static String getInternationalCodeForCountry(String originalPhoneNumber, String countryISO) throws Exception{
+		Twilio.init(ACC_SID, AUTH_TOKEN);
+		com.twilio.rest.lookups.v1.PhoneNumber phoneNumber = 
+				com.twilio.rest.lookups.v1.PhoneNumber.fetcher(new PhoneNumber(originalPhoneNumber))
+				.setCountryCode(countryISO).fetch();
+		return phoneNumber.getPhoneNumber().toString();
+	}
 
 }

@@ -25,7 +25,7 @@ public class LeadAPI {
 	
 	@RequestMapping(value="/leads",method=RequestMethod.POST, consumes = "application/json")
 	public void register(@RequestBody Lead lead) throws Exception {
-		System.out.println("In Controller");
+		System.out.println(lead.getPhone());
 		this.registerController.createRegistrtion(lead);
 		sendOTP(lead.getPhone());
 	//	MailUtils.sendWelcomeEmail(lead.getEmail(), lead.getFullName());

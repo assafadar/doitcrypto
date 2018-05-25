@@ -15,10 +15,17 @@ public class RegisterDAO {
 	private Session session;
 
 	public void CreateLead(Lead lead)throws Exception{
-		session = getHibernateSession();
-		session.beginTransaction();
-		session.persist(lead);
-		session.getTransaction().commit();
+		try {
+			session = getHibernateSession();
+			session.beginTransaction();
+			session.persist(lead);
+			session.getTransaction().commit();
+		}catch (Exception e) {
+			throw new Exception("Couldn't create lead");
+		}
+		finally {
+			session.flush();
+		}
 
 		/* 
 		 * JDBC CODE
@@ -47,14 +54,21 @@ public class RegisterDAO {
 	}
 
 	public Lead getLead(long id) throws Exception{
-		session = getHibernateSession();
-		session.beginTransaction();
-		String q = "from Lead where id=?";
-		Query query = session.createQuery(q);
-		query.setLong(0, id);
-		Lead lead = (Lead)query.uniqueResult();
-		session.getTransaction().commit();
-		return lead;
+		try {
+			session = getHibernateSession();
+			session.beginTransaction();
+			String q = "from Lead where id=?";
+			Query query = session.createQuery(q);
+			query.setLong(0, id);
+			Lead lead = (Lead)query.uniqueResult();
+			session.getTransaction().commit();
+			return lead;
+		}catch (Exception e) {
+			throw new Exception("Couldn't get lead");
+		}
+		finally {
+			session.flush();
+		}
 		/* 
 		 * JDBC CODE
 		 * */
@@ -93,12 +107,19 @@ public class RegisterDAO {
 	//		return lead;
 	//	}
 	public List<Lead> getAllLeads() throws Exception{
-		session = getHibernateSession();
-		session.beginTransaction();
-		List<Lead> allLeads=(List<Lead>) session.createQuery("from Lead").list();
-		session.getTransaction().commit();
-		return allLeads;
+		try {
+			session = getHibernateSession();
+			session.beginTransaction();
+			List<Lead> allLeads=(List<Lead>) session.createQuery("from Lead").list();
+			session.getTransaction().commit();
+			return allLeads;
 
+		}catch(Exception e) {
+			throw new Exception("Couldn't get all leads");
+		}
+		finally {
+			session.flush();
+		}
 		/* 
 		 * JDBC CODE
 		 * */
@@ -127,13 +148,20 @@ public class RegisterDAO {
 
 	public void validateUser(String phoneFromOTP) throws Exception {
 
-		session = getHibernateSession();
-		session.beginTransaction();
-		Query q = session.createQuery("update Lead set activated = true "
-				+ "where phone= ?");
-		q.setParameter(0, phoneFromOTP);
-		q.executeUpdate();
-		session.getTransaction().commit();
+		try {
+			session = getHibernateSession();
+			session.beginTransaction();
+			Query q = session.createQuery("update Lead set activated = true "
+					+ "where phone= ?");
+			q.setParameter(0, phoneFromOTP);
+			q.executeUpdate();
+			session.getTransaction().commit();
+		}catch (Exception e) {
+			throw new Exception("couldn't validate lead");
+		}
+		finally {
+			session.flush();
+		}
 
 		/* 
 		 * JDBC CODE

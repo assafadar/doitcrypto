@@ -6,9 +6,9 @@
 <hibernate-configuration>
 <session-factory>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">Asafadar1993</property>
+    <property name="hibernate.connection.url">jdbc:mysql://mgs0iaapcj3p9srz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/vcnbvkovdl4h6bz4</property>
+    <property name="hibernate.connection.username">tk3esr1ljtmyc2wl</property>
+    <property name="hibernate.connection.password">fiszudog1m8594w3</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>
     <mapping class="beans.Lead" />

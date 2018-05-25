@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import beans.Lead;
 import dao.RegisterDAO;
 import managers.OTPManager;
+import otp.OTP;
+import utils.DataValidationsUtils;
 
 @Controller
 public class RegisterController {
@@ -15,7 +17,10 @@ public class RegisterController {
 	
 	public void createRegistrtion(Lead lead) throws Exception{
 				if (lead!=null) {
-					this.registerDAO.CreateLead(lead);
+					lead.setPhone(
+							OTP.getInternationalCodeForCountry
+							(lead.getPhone(), lead.getCountry()));
+					registerDAO.CreateLead(lead);
 				}
 				else {
 					throw new Exception("lead details are empty");

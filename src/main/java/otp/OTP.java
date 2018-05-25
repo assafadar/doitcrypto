@@ -5,8 +5,8 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 public class OTP {
-	public static final String ACC_SID="AC26e1dcfa511159225bb926b91fabb0d9";
-	public static final String AUTH_TOKEN="1630e19e9c6a48e5da9a39a3aacfbbbb";
+	public static final String ACC_SID="ACC_SID";
+	public static final String AUTH_TOKEN="AUTH_TOKEN";
 	
 	public static String sendOTP(String phoneNumber){
 	
